@@ -1,0 +1,37 @@
+@import "./player";
+@import "./song";
+@import "./library";
+@import "./nav";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #efefef;
+  height: 100vh;
+}
+
+.App {
+  // border: 2px solid orange;
+  transform: translateX(0);
+  .primary_heading {
+    text-align: center;
+  }
+  .menu_box {
+    // border: 2px solid yellow;
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  &.shift {
+    transform: translateX(50%);
+  }
+}

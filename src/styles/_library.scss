@@ -1,0 +1,93 @@
+.library {
+  &_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #efefef;
+    width: 100vw;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 9px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 17px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transform: translateX(-100%);
+
+    &.show {
+      transform: translateX(0);
+    }
+    .library_heading {
+      text-align: center;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      padding-bottom: 0.5rem;
+      font-weight: bold;
+      border-bottom: 1px solid blue;
+      @media (max-width: 700px) {
+        text-align: left;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+.librarySong_container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  // overflow-x: hidden;
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px 8px 0 0;
+  &:hover {
+    background: #cccccc;
+    .song_img {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  &.selected {
+    background: rgb(188, 188, 240);
+  }
+  .song_imgBox {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    // border: 2px solid green;
+    border: 6px solid #efeefe;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: all 0.4s ease;
+      transform: scale(1.2);
+      opacity: 0.86;
+    }
+  }
+  .song_descBox {
+    margin-left: 1rem;
+    .song_name {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      font-weight: bold;
+    }
+    .song_artist {
+      // letter-spacing: 1px;
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  cursor: pointer;
+  color: rgb(201, 92, 59);
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+}
